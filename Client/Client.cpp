@@ -205,10 +205,12 @@ int main(int argc, char* argv[])
     std::cout << "Connected to server.\n";
 
     // ── SYS-040: read, packetise and transmit until EOF ───────────────────────
-    std::string line;
-    uint64_t    linesSent = 0;
-    uint64_t    linesSkipped = 0;
-    bool        connectionOK = true;
+    while (connectionOK)
+{
+    // Rewind to start of file for each loop iteration
+    telFile.clear();
+    telFile.seekg(0);
+    Sleep(1);
 
     while (std::getline(telFile, line) && connectionOK)
     {
@@ -238,9 +240,8 @@ int main(int argc, char* argv[])
             break;
         }
         ++linesSent;
-
-        Sleep(1);
     }
+}
 
     // ── Send EOF marker so the server can finalise the flight average ─────────
     if (connectionOK)
