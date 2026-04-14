@@ -205,7 +205,12 @@ int main(int argc, char* argv[])
     std::cout << "Connected to server.\n";
 
     // ── SYS-040: read, packetise and transmit until EOF ───────────────────────
-    while (connectionOK)
+    std::string line;
+uint64_t    linesSent = 0;
+uint64_t    linesSkipped = 0;
+bool        connectionOK = true;
+
+while (connectionOK)
 {
     // Rewind to start of file for each loop iteration
     telFile.clear();
