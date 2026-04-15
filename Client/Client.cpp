@@ -210,8 +210,7 @@ uint64_t    linesSent = 0;
 uint64_t    linesSkipped = 0;
 bool        connectionOK = true;
 
-while (connectionOK)
-{
+    // while (connectionOK)
     // Rewind to start of file for each loop iteration
     telFile.clear();
     telFile.seekg(0);
@@ -245,8 +244,9 @@ while (connectionOK)
             break;
         }
         ++linesSent;
+
+        Sleep(1);
     }
-}
 
     // ── Send EOF marker so the server can finalise the flight average ─────────
     if (connectionOK)

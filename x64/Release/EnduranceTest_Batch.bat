@@ -6,7 +6,7 @@ SET /A "count = 100"
 @echo %time%
      :spawnloop
      if %index% leq %count% (
-          START /MIN Client.exe
+          START /MIN Client.exe 25.21.209.204 "Telem_2023_3_12 14_56_40.txt"
           SET /A index = %index% + 1
           @echo %index%
           goto :spawnloop
