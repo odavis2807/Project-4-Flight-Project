@@ -1,0 +1,9 @@
+[15:55:37] === Telemetry Server started on port 55555 ===
+[15:55:37] Waiting for aircraft connections...
+
+[15:55:46] New connection from 127.0.0.1:55966
+[15:55:46] Aircraft 1156057631 - Flight #1 started. Initial fuel: 4564.47 gal
+[15:55:47] Aircraft 1156057631 | Samples: 60 | Avg consumption: 234.29 GPH | Fuel remaining: 4560.59 gal
+[15:55:48] Aircraft 1156057631 | Samples: 120 | Avg consumption: 252.10 GPH | Fuel remaining: 4556.23 gal
+[15:55:49] Aircraft 1156057631 | Samples: 180 | Avg consumption: 232.28 GPH | Fuel remaining: 4553.02 gal
+[15:55:49] Aircraft 1156057631 - Flight #1 ended. Flight avg: 222.14 GPH | Lifetime avg: 222.14 GPH (1 flight(s))
